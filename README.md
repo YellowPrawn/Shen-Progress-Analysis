@@ -3,4 +3,4 @@ The objective of this project is determining if I have improved in using Shen's 
 After obtainining the data, I will then determine the trends in each of the factors mentioned in the above through basic time series analysis to see if my usage of the ability is consistent or if it varies within games.
 The results of the analysis are purely for personal understanding to potentially improve my performance while playing Shen.
 
-## Contributors: Damien Fung
+### Contributors: Damien Fung
