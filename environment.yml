@@ -1,7 +1,7 @@
-name: shen-analysis
+name: teemo-analysis
 channels:
   - defaults
   - conda-forge
 dependencies:
   - python=3.9
-prefix: /Users/damienfung/miniforge3/envs/shen-analysis
+prefix: /Users/damienfung/miniforge3/envs/teemo-analysis
