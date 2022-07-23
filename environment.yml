@@ -1,0 +1,7 @@
+name: shen-analysis
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+prefix: /Users/damienfung/miniforge3/envs/shen-analysis
