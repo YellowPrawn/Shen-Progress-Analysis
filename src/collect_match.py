@@ -27,7 +27,10 @@ def collect(my_region, summoner_name, champion_name, matches, api_key):
     champion_matches = []
     for i in range(matches): 
         # fetch ith match detail
-        matchID = c.check(my_region, me['puuid'], champion_name, i, my_matches, watcher)
+        try:
+            matchID = c.check(my_region, me['puuid'], champion_name, i, my_matches, watcher)
+        except IndexError:
+            pass
         if matchID is not None:
             champion_matches.append(matchID)
     return champion_matches, me['puuid']

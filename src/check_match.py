@@ -17,7 +17,7 @@ from riotwatcher import LolWatcher, ApiError
 #' @export
 #'
 #' @examples
-#' check('na1', 'PrawnJ', DKJpLKoGsLmWP5btU6O4ZlPYKLwITUmf9pF921BIbf4q5vd9ioWDKGpP34qYWaDiRH-zuyHR3lxFng, 'Shen', 1, my_matches, watcher)
+#' check('na1', 'PrawnJ', 'DKJpLKoGsLmWP5btU6O4ZlPYKLwITUmf9pF921BIbf4q5vd9ioWDKGpP34qYWaDiRH-zuyHR3lxFng', 'Shen', 1, my_matches, watcher)
 def check(my_region, puuid, champion_name, i, my_matches, watcher):
     # fetch ith match detail
     match_detail = watcher.match.by_id(my_region, my_matches[i])
