@@ -4,4 +4,5 @@ channels:
   - conda-forge
 dependencies:
   - python=3.9
+  - pytest=6.2.5
 prefix: /Users/damienfung/miniforge3/envs/teemo-analysis
