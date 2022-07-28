@@ -5,4 +5,5 @@ channels:
 dependencies:
   - python=3.9
   - pytest=6.2.5
+  - pandas=1.4.1
 prefix: /Users/damienfung/miniforge3/envs/teemo-analysis
