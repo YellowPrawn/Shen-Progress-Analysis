@@ -13,13 +13,15 @@ From my basic exploration of the match timeline API, only damage which results i
 
 # Usage
 These dependencies can be accessed quickly through the `environment.yml` file using conda. To do this, ensure conda is installed, navigate to the root directory, then type the following in your terminal
-```conda env create --file environment.yml
+``` 
+conda env create --file environment.yml
 ```
 
 In order to run the scripts in this project, you will need a Riot API key. You can generate a developer key through the [Riot Developer Portal](https://developer.riotgames.com/).
 
 After obtaining an API key, place it in the `api_key.txt` file in the root directory. This can be used to run the test scripts. To perform the tests, navigate to the root directory and enter 
-```pytest
+``` 
+pytest
 ``` 
 into the terminal
 
