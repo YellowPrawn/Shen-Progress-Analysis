@@ -2,6 +2,7 @@ output.json
 .ipynb_checkpoints
 .pytest_cache
 .virtual_documents
+api_key.txt
 src/.ipynb_checkpoints
 src/analysis.ipynb
 test/__pycache__
