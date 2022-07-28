@@ -5,7 +5,7 @@ import sys
 sys.path.append(".")
 from src.get_participantId import get_participantId
 
-api_key = 'RGAPI-xxxx'
+api_key = open("api_key.txt", "r").readline()
 watcher = LolWatcher(api_key)
 
 # tests if the given puuid is present in the given matchId

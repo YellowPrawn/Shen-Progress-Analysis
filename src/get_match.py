@@ -12,16 +12,16 @@ import check_match as c
 #' @param champion_name champion's name to pull matches of
 #' @param matches number of matches to scrape 
 #' @param api_key api key to pull off the riot API
+#' @param watcher LolWater object
 #'
 #' @return a list of strings (match IDs) and player puuid
 #'
 #' @export
 #'
 #' @examples
-#' collect('na1', 'PrawnJ', 'Shen', 1, 'RGAPI-xxxxx')
-def collect(my_region, summoner_name, champion_name, matches, api_key):
+#' get_match('na1', 'PrawnJ', 'Shen', 1, 'RGAPI-xxxxx')
+def get_match(my_region, summoner_name, champion_name, matches, watcher):
     # global variables
-    watcher = LolWatcher(api_key)
     me = watcher.summoner.by_name(my_region, summoner_name)
     my_matches = watcher.match.matchlist_by_puuid(my_region, me['puuid'])
     champion_matches = []

@@ -1,0 +1,7 @@
+output.json
+.ipynb_checkpoints
+.pytest_cache
+.virtual_documents
+src/.ipynb_checkpoints
+src/analysis.ipynb
+test/__pycache__
