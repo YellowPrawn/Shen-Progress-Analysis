@@ -23,7 +23,7 @@ import check_match as c
 def get_match(my_region, summoner_name, champion_name, matches, watcher):
     # global variables
     me = watcher.summoner.by_name(my_region, summoner_name)
-    my_matches = watcher.match.matchlist_by_puuid(my_region, me['puuid'])
+    my_matches = watcher.match.matchlist_by_puuid(my_region, me['puuid'], count = 100)
     champion_matches = []
     for i in range(matches): 
         # fetch ith match detail
