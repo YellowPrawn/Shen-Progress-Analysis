@@ -56,6 +56,7 @@ for m in teemo_matches:
                                 'shrooms_created': [shrooms_created], 
                                 'shrooms_destroyed': [shrooms_destroyed], 
                                 'shroom_damage': [shroom_damage]})
+                                
     summary_table = pd.concat([summary_table, match_summary])
-summary_table.to_csv('./data/shroom_summary.csv', index = None, header=True)
+summary_table.to_csv('./data/summary.csv', index = None, header=True)
         

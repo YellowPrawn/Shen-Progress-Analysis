@@ -14,9 +14,9 @@ def get_shroom_damage(frames):
     i = 0
     for e in frames['events']:
         try:
-            for v in e['victimDamageDealt']:
+            for v in e['victimDamageReceived']:
                 if v['spellName'] == 'teemorcast' and v['name'] == 'Teemo':
                     i = i + v['magicDamage']
         except KeyError:
-            pass
+                pass
     return i
