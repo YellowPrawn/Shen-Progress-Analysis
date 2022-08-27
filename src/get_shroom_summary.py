@@ -4,6 +4,7 @@ import get_participantId as gp
 import get_shrooms_created as gsc
 import get_shrooms_destroyed as gsde
 import get_shroom_damage as gsd
+import get_kill_participation as gkp
 import pandas as pd
 import numpy as np
 import argparse
@@ -16,8 +17,6 @@ import argparse
 #' @param my_region region of player
 #' @param summoner_name name of player
 #' @param matches number of matches to scrape 
-#'
-#' @return a number of shrooms placed, number of shrooms destroyed
 #'
 #' @export
 #'
@@ -42,6 +41,7 @@ summary_table = pd.DataFrame(columns=['matchId','shrooms_created','shrooms_destr
 for m in teemo_matches:
     timeline = watcher.match.timeline_by_match(my_region, m)
     participant_id = gp.get_participantId(my_region, puuid, m, watcher)
+    kill_participation = gkp.get_kill_participation(my_region, puuid, m, watcher)
 
     shrooms_created = 0
     shrooms_destroyed = 0 
@@ -55,7 +55,8 @@ for m in teemo_matches:
     match_summary = pd.DataFrame({'matchId': [m], 
                                 'shrooms_created': [shrooms_created], 
                                 'shrooms_destroyed': [shrooms_destroyed], 
-                                'shroom_damage': [shroom_damage]})
+                                'shroom_damage': [shroom_damage],
+                                'kill_participation': [kill_participation]})
                                 
     summary_table = pd.concat([summary_table, match_summary])
 summary_table.to_csv('./data/summary.data', index = None, header=True)
